@@ -23,3 +23,5 @@ spec:
         envFrom:
           - configMapRef:
               name: admin-area-config
+          - secretRef:
+              name: admin-area-secret
