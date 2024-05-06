@@ -4,10 +4,11 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - services.yaml
+  - secret.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
-  
+
 configMapGenerator:
   - name: admin-area-config
     literals:
