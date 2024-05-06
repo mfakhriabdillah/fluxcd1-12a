@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - deployment.yaml
+  - services.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+  
+configMapGenerator:
+  - name: admin-area-config
+    literals:
+      - "APP_NAME=admin-area"
+      - "APP_VERSION=v1.0"
