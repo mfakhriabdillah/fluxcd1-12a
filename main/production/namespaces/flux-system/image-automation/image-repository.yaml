@@ -4,5 +4,7 @@ metadata:
   name: goapp-batch12
   namespace: flux-system
 spec:
+  secretRef:
+      name: dockercred
   image: fakhriabdillah/goapp-batch12
   interval: 1m
