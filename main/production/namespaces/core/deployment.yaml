@@ -14,11 +14,11 @@ spec:
       imagePullSecrets:
         - name: dockercred
       containers:
-      - name: goapp-depl
-        image: fakhriabdillah/goapp-batch12:10 # {"$imagepolicy": "flux-system:goapp-batch12"}
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "50m"
-        ports:
-        - containerPort: 8080
+        - name: goapp-depl
+          image: fakhriabdillah/goapp-batch12:12 # {"$imagepolicy": "flux-system:goapp-batch12"}
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "50m"
+          ports:
+            - containerPort: 8080
