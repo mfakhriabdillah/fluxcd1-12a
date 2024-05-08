@@ -1,0 +1,8 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: goapp-batch12
+  namespace: flux-system
+spec:
+  image: fakhriabdillah/goapp-batch12
+  interval: 1m
