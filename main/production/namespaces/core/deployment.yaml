@@ -11,6 +11,8 @@ spec:
       labels:
         app: goapp-depl
     spec:
+      imagePullSecrets:
+        - name: dockercred
       containers:
       - name: goapp-depl
         image: fakhriabdillah/goapp-batch12:10
