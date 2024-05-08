@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goapp-depl
+spec:
+  selector:
+    matchLabels:
+      app: goapp-depl
+  template:
+    metadata:
+      labels:
+        app: goapp-depl
+    spec:
+      containers:
+      - name: goapp-depl
+        image: fakhriabdillah/goapp-batch12:10
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "50m"
+        ports:
+        - containerPort: 8080
